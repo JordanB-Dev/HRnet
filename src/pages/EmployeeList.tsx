@@ -1,3 +1,7 @@
 export default function EmployeeList() {
-  return <div>EmployeeList</div>
+  return (
+    <section className="flex items-center justify-center m-auto">
+      EmployeeList
+    </section>
+  )
 }
