@@ -11,9 +11,12 @@ import dayjs from 'dayjs'
 import BtnDisabled from '../components/BtnDisabled'
 import Btn from '../components/Btn'
 import { toast, Toaster } from 'sonner'
+import Modal from '../components/Modal'
 
 export default function CreateEmployee() {
   const dispatch = useDispatch()
+  const [open, setOpen] = useState(false)
+
   const [firstname, setFirstname] = useState('')
   const [lastname, setLastname] = useState('')
   const [state, setState] = useState('')
@@ -109,6 +112,7 @@ export default function CreateEmployee() {
 
     dispatch(addEmployee(serializedData))
     setDate(initialDate)
+    setOpen(true)
     setFirstname('')
     setLastname('')
     setState('')
@@ -208,7 +212,14 @@ export default function CreateEmployee() {
               handleChange={(event) => setDepartment(event.target.value)}
             />
             <Toaster />
-
+            <Modal
+              open={open}
+              styleBox={'bg-card font-title border-input border py-8 px-8'}
+              styleBtn={'font-bold hover:bg-white/10'}
+              onClose={() => setOpen(false)}
+            >
+              <p>Employee Created !</p>
+            </Modal>
             {btn}
           </form>
         </div>

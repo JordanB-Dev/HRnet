@@ -4,7 +4,7 @@ const Header = () => {
   const location = useLocation()
   return (
     <>
-      <section className="sticky top-0 left-0 right-0 z-50 bg-background dark:bg-background2">
+      <section className="sticky top-0 left-0 right-0 bg-background">
         <header className="container mx-auto px-5 flex justify-between py-4 items-center">
           <Link to="/">
             <span className="lg:text-2xl text-lg mr-auto py-2 font-bold md:z-auto z-[99999]">
