@@ -214,12 +214,9 @@ export default function CreateEmployee() {
             <Toaster />
             <Modal
               open={open}
-              styleBox={'bg-card font-title border-input border py-8 px-8'}
-              styleBtn={'font-bold hover:bg-white/10'}
+              description={'Employee Created !'}
               onClose={() => setOpen(false)}
-            >
-              <p>Employee Created !</p>
-            </Modal>
+            />
             {btn}
           </form>
         </div>
