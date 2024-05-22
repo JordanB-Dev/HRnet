@@ -6,6 +6,9 @@ const Pagination = ({
   currentPage,
   siblingCount = 1,
   totalPageCount,
+  stylePagination,
+  stylePaginationFocus,
+  stylePaginationNoFocus,
 }) => {
   const paginationRange = usePagination({
     currentPage,
@@ -27,14 +30,14 @@ const Pagination = ({
   let lastPage = paginationRange[paginationRange.length - 1]
 
   return (
-    <div className="flex flex-col items-center px-5 py-5 bg-background xs:flex-row xs:justify-between">
+    <div className="flex flex-col items-center px-5 py-5 xs:flex-row xs:justify-between">
       <div className="flex items-center">
         <button
           aria-label="Previous"
           aria-labelledby="Previous"
           disabled={currentPage === 1}
           type="button"
-          className="w-full p-4 text-base bg-card border rounded-l-xl hover:bg-black disabled:cursor-not-allowed disabled:opacity-60"
+          className={`${stylePagination ? stylePagination : ' bg-card hover:bg-black/50'} w-full p-4 text-base border rounded-l-xl disabled:cursor-not-allowed disabled:opacity-60`}
           onClick={onPrevious}
         >
           <svg
@@ -53,7 +56,7 @@ const Pagination = ({
             return (
               <button
                 key={pageNumber}
-                className="cursor-default w-full px-4 py-2 text-base bg-card hover:bg-black border"
+                className="bg-card hover:bg-black/50 cursor-default w-full px-4 py-2 text-base border"
               >
                 &#8230;
               </button>
@@ -64,10 +67,10 @@ const Pagination = ({
             <button
               key={pageNumber}
               type="button"
-              className={`w-full px-4 py-2 text-base border bg-card ${
+              className={`${stylePagination ? stylePagination : 'bg-card'} w-full px-4 py-2 text-base border ${
                 pageNumber === currentPage
-                  ? 'text-white font-semibold bg-black'
-                  : 'text-white bg-card  hover:bg-card/50'
+                  ? `${stylePaginationFocus ? stylePaginationFocus : 'font-semibold bg-card'} `
+                  : `${stylePaginationNoFocus ? stylePaginationNoFocus : 'bg-card hover:bg-card/50'} `
               }`}
               onClick={() => onPageChange(pageNumber)}
             >
@@ -81,7 +84,7 @@ const Pagination = ({
           aria-labelledby="Next"
           disabled={currentPage === lastPage}
           type="button"
-          className="w-full p-4 text-base bg-card hover:bg-black border-t border-b border-r rounded-r-xl disabled:cursor-not-allowed disabled:opacity-60"
+          className={`${stylePagination ? stylePagination : ' bg-card hover:bg-black/50'} w-full p-4 text-base border-t border-b border-r rounded-r-xl disabled:cursor-not-allowed disabled:opacity-60`}
           onClick={onNext}
         >
           <svg
