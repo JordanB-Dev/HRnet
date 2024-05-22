@@ -1,5 +1,4 @@
 import Pagination from '../Pagination'
-import SearchBar from '../SearchBar'
 
 const DataTable = ({
   pageTitle,
@@ -7,9 +6,7 @@ const DataTable = ({
   currentPage,
   setCurrentPage,
   pages,
-  data,
-  setSearchResults,
-  searchInputPlaceHolder,
+  SearchBar,
   children,
 }) => {
   return (
@@ -19,13 +16,7 @@ const DataTable = ({
           <div className="flex flex-row flex-wrap justify-between w-full mb-1 sm:mb-0">
             <h1 className="text-2xl font-semibold">{pageTitle}</h1>
 
-            <div className="text-end">
-              <SearchBar
-                posts={data}
-                setSearchResults={setSearchResults}
-                searchInputPlaceHolder={searchInputPlaceHolder}
-              />
-            </div>
+            <div className="text-end">{SearchBar}</div>
           </div>
           <div className="px-4 py-4 -mx-4 overflow-x-auto sm:-mx-8 sm:px-8">
             <div className="inline-block min-w-full overflow-hidden rounded-lg shadow">
@@ -36,7 +27,7 @@ const DataTable = ({
                       <th
                         key={index}
                         scope="col"
-                        className="px-5 py-3 text-sm font-normal text-left  uppercase bg-background dark:bg-background2 border-b border-input2 dark:border-input"
+                        className="px-5 py-3 text-sm font-normal text-left uppercase bg-background border-b border-input"
                       >
                         {title}
                       </th>

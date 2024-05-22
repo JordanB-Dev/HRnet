@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import DataTable from '../components/DataTable'
+import SearchBar from '../components/SearchBar'
 
 export default function EmployeeList() {
   const employees = useSelector((state) => state.employees.employees)
@@ -19,8 +20,6 @@ export default function EmployeeList() {
     <>
       <DataTable
         pageTitle="Employee List"
-        dataListName="Employee"
-        searchInputPlaceHolder="Search..."
         tableHeaderTitleList={[
           'First Name',
           'Last Name',
@@ -32,8 +31,9 @@ export default function EmployeeList() {
           'State',
           'Zip Code',
         ]}
-        data={employees}
-        setSearchResults={setSearchResults}
+        SearchBar={
+          <SearchBar data={employees} setSearchResults={setSearchResults} />
+        }
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         pages={pages}

@@ -34,7 +34,7 @@ const Pagination = ({
           aria-labelledby="Previous"
           disabled={currentPage === 1}
           type="button"
-          className="w-full p-4 text-base bg-card border rounded-l-xl  hover:bg-black disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full p-4 text-base bg-card border rounded-l-xl hover:bg-black disabled:cursor-not-allowed disabled:opacity-60"
           onClick={onPrevious}
         >
           <svg
