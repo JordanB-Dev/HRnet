@@ -23,7 +23,7 @@ export default function InputSearch({
         />
       </div>
       <button
-        className={`${styleBtn ? styleBtn : 'text-black bg-primary text-base font-semibold'} flex-shrink-0 px-4 py-2 rounded-lg font-semiboldrounded-lg shadow-md focus:outline-none`}
+        className={`${styleBtn ? styleBtn : 'text-black bg-primary text-base font-semibold'} flex-shrink-0 px-4 py-2 rounded-lg shadow-md focus:outline-none`}
         type="submit"
       >
         {textBtn}
