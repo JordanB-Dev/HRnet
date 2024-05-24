@@ -1,4 +1,4 @@
-const Btn = ({ title }) => {
+const Button = ({ title }) => {
   return (
     <button
       title="Button"
@@ -9,4 +9,4 @@ const Btn = ({ title }) => {
   )
 }
 
-export default Btn
+export default Button
