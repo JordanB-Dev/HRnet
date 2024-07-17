@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import DataTable from '../components/DataTable'
-import SearchBar from '../components/SearchBar'
+import InputSearch from '../components/ui/InputSearch'
 
 export default function EmployeeList() {
   const employees = useSelector((state) => state.employees.employees)
@@ -15,6 +15,40 @@ export default function EmployeeList() {
   const indexOfLastPost = currentPage * pageSize
   const indexOfFirstPost = indexOfLastPost - pageSize
   const currentPosts = searchResults.slice(indexOfFirstPost, indexOfLastPost)
+
+  const handleSearchChange = (e) => {
+    if (!e.target.value) return setSearchResults(employees)
+
+    const resultsArray = employees.filter(
+      (val) =>
+        val.firstName?.toString().includes(e.target.value) ||
+        val.lastName?.toString().includes(e.target.value) ||
+        val.department?.toString().includes(e.target.value) ||
+        val.street?.toString().includes(e.target.value) ||
+        val.city?.toString().includes(e.target.value) ||
+        val.state?.toString().includes(e.target.value) ||
+        val.dateOfBirth?.toString().includes(e.target.value) ||
+        val.startDate?.toString().includes(e.target.value) ||
+        val.firstName?.toLowerCase().includes(e.target.value) ||
+        val.lastName?.toLowerCase().includes(e.target.value) ||
+        val.department?.toLowerCase().includes(e.target.value) ||
+        val.street?.toLowerCase().includes(e.target.value) ||
+        val.city?.toLowerCase().includes(e.target.value) ||
+        val.state?.toLowerCase().includes(e.target.value) ||
+        val.dateOfBirth?.toLowerCase().includes(e.target.value) ||
+        val.startDate?.toLowerCase().includes(e.target.value) ||
+        val.firstName?.toUpperCase().includes(e.target.value) ||
+        val.lastName?.toUpperCase().includes(e.target.value) ||
+        val.department?.toUpperCase().includes(e.target.value) ||
+        val.street?.toUpperCase().includes(e.target.value) ||
+        val.city?.toUpperCase().includes(e.target.value) ||
+        val.state?.toUpperCase().includes(e.target.value) ||
+        val.dateOfBirth?.toUpperCase().includes(e.target.value) ||
+        val.startDate?.toUpperCase().includes(e.target.value),
+    )
+
+    setSearchResults(resultsArray)
+  }
 
   return (
     <>
@@ -32,7 +66,11 @@ export default function EmployeeList() {
           'Zip Code',
         ]}
         SearchBar={
-          <SearchBar data={employees} setSearchResults={setSearchResults} />
+          <InputSearch
+            handleSearchChange={handleSearchChange}
+            searchInputPlaceHolder="Search..."
+            textBtn={'Search'}
+          />
         }
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
