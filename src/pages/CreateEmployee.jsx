@@ -179,11 +179,13 @@ export default function CreateEmployee() {
               autoComplete={'off'}
             />
             <SelectMenu
-              label="State"
+              id={'state'}
+              title="State"
               name="state"
               value={state}
               options={states}
               handleChange={(event) => setState(event.target.value)}
+              autoComplete={'off'}
             />
             <Input
               value={zipCode}
@@ -195,11 +197,13 @@ export default function CreateEmployee() {
               autoComplete={'off'}
             />
             <SelectMenu
-              label="Department"
+              id={'department'}
+              title="Department"
               name="department"
               value={department}
               options={departmentOptions}
               handleChange={(event) => setDepartment(event.target.value)}
+              autoComplete={'off'}
             />
             <Toaster />
             <Modal
