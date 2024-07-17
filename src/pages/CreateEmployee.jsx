@@ -37,10 +37,10 @@ export default function CreateEmployee() {
       { value: lastname, fieldName: 'Last Name' },
       { value: street, fieldName: 'Street' },
       { value: city, fieldName: 'City' },
-      { value: zipCode, fieldName: 'Zip Code' },
       { value: department, fieldName: 'Department' },
       { value: state, fieldName: 'State' },
     ]
+    const fieldsToValidateCode = [{ value: zipCode, fieldName: 'Zip Code' }]
 
     for (let { value, fieldName } of fieldsToValidate) {
       if (isEmpty(value)) {
@@ -53,6 +53,16 @@ export default function CreateEmployee() {
       }
       if (isLength(value)) {
         toast.error(`${fieldName} be between 3 and 20 characters.`)
+        return false
+      }
+    }
+    for (let { value, fieldName } of fieldsToValidateCode) {
+      if (isEmpty(value)) {
+        toast.error(`${fieldName} is required.`)
+        return false
+      }
+      if (isLength(value)) {
+        toast.error(`${fieldName} be between 3 and 10 number.`)
         return false
       }
     }
@@ -177,7 +187,7 @@ export default function CreateEmployee() {
             />
             <Input
               value={zipCode}
-              type={'text'}
+              type={'number'}
               name={'zipcode'}
               id={'zipcode'}
               title="Zip Code"
