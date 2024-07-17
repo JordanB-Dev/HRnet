@@ -27,6 +27,7 @@ export default function EmployeeList() {
         val.street?.toString().includes(e.target.value) ||
         val.city?.toString().includes(e.target.value) ||
         val.state?.toString().includes(e.target.value) ||
+        val.zipCode?.toString().includes(e.target.value) ||
         val.dateOfBirth?.toString().includes(e.target.value) ||
         val.startDate?.toString().includes(e.target.value) ||
         val.firstName?.toLowerCase().includes(e.target.value) ||
