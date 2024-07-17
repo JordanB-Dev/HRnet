@@ -35,8 +35,6 @@ export default function CreateEmployee() {
     const fieldsToValidate = [
       { value: firstname, fieldName: 'First Name' },
       { value: lastname, fieldName: 'Last Name' },
-      { value: dateOfBirth, fieldName: 'Date of Birth' },
-      { value: startDate, fieldName: 'Start Date' },
       { value: street, fieldName: 'Street' },
       { value: city, fieldName: 'City' },
       { value: zipCode, fieldName: 'Zip Code' },
@@ -137,7 +135,7 @@ export default function CreateEmployee() {
             />
 
             <DatePicker
-              value={startDate}
+              value={dateOfBirth}
               name={'Date of Birth'}
               id={'dateOfBirth'}
               title="Date of Birth"
