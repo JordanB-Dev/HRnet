@@ -10,7 +10,7 @@ HRnet
 
 > ## **Maquette HRnet**
 >
-> ![Screenshot_1](https://image.noelshack.com/fichiers/2024/30/5/1721968383-screenshot-1.png) ![Screenshot_2](https://image.noelshack.com/fichiers/2024/30/5/1721968461-screenshot-2.png)  ![Screenshot_3](https://image.noelshack.com/fichiers/2024/30/5/1721968511-screenshot-3.png) 
+> ![Screenshot_1](https://camo.githubusercontent.com/1cc7e0a5783fefbc3b0c2eadcb2ee85ee45d4c9db4551f223886f88a4b360ead/68747470733a2f2f696d6167652e6e6f656c736861636b2e636f6d2f66696368696572732f323032342f33302f352f313732313936383338332d73637265656e73686f742d312e706e67) ![Screenshot_2](https://image.noelshack.com/fichiers/2024/30/5/1721968461-screenshot-2.png)  ![Screenshot_3](https://image.noelshack.com/fichiers/2024/30/5/1721968511-screenshot-3.png) 
 
 
 > ## **Languages Front-End**
