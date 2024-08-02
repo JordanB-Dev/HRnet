@@ -20,7 +20,7 @@ const DataTable = ({
         <div className="py-8">
           <div className="flex flex-row flex-wrap justify-between w-full mb-1 sm:mb-0">
             <h1
-              className={`${stylePageTitle ? stylePageTitle : 'font-title text-xl font-semibold'}`}
+              className={`${stylePageTitle ? stylePageTitle : 'font-title text-2xl font-semibold'}`}
             >
               {pageTitle}
             </h1>

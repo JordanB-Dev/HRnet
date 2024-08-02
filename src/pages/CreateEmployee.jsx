@@ -122,7 +122,7 @@ export default function CreateEmployee() {
       <div className="flex-col items-center justify-center lg:w-3/6 sm:w-4/6 w-full">
         <div className="rounded-lg border-2  border-border bg-card text-cardforeground shadow-sm p-[20px]">
           <div className="flex mb-5 items-center justify-center">
-            <h1 className="font-title text-xl font-semibold text-cardforeground">
+            <h1 className="font-title text-2xl font-semibold text-cardforeground">
               Create Employee
             </h1>
           </div>
