@@ -21,7 +21,7 @@
     "react-redux": "^9.1.2",
     "react-router": "^6.23.1",
     "react-router-dom": "^6.23.1",
-    "react-vite-component-modal": "^1.0.2",
+    "react-vite-component-modal": "^1.1.0",
     "redux-persist": "^6.0.0",
     "sonner": "^1.4.41"
   },

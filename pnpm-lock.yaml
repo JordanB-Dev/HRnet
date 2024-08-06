@@ -36,8 +36,8 @@ dependencies:
     specifier: ^6.23.1
     version: 6.23.1(react-dom@18.3.1)(react@18.3.1)
   react-vite-component-modal:
-    specifier: ^1.0.2
-    version: 1.0.2
+    specifier: ^1.1.0
+    version: 1.1.0
   redux-persist:
     specifier: ^6.0.0
     version: 6.0.0(react@18.3.1)(redux@5.0.1)
@@ -2507,8 +2507,8 @@ packages:
       react-router-dom: 6.23.1(react-dom@18.3.1)(react@18.3.1)
     dev: false
 
-  /react-vite-component-modal@1.0.2:
-    resolution: {integrity: sha512-98+13m49h4TpLyIjrnhrwRgwZzDDfkRuLHzdKRWMJlgcA+NV+MB9ouexrjSkC4mJq6C1kSLhMT3Vrwz+G9ehaw==}
+  /react-vite-component-modal@1.1.0:
+    resolution: {integrity: sha512-FV66SsXltYjfzVvT8nwOypm0kXilwQrU8O5wm/pNIEi01eMos+orqNaG9uVkp9+LOjG/wzZWqMv400zhTVDtbg==}
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
